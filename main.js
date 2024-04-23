@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 //Declear a constant `answer` and assign it to the resultof inquirer.prompt function
 const answers = await inquirer.prompt([
@@ -7,7 +8,7 @@ const answers = await inquirer.prompt([
         message: "Enter your sentence to count the word: "
     }
 ]);
-const words = answers.Sentence.trim().split("  ");
+const words = answers.Sentence.trim().split(" ");
 //Print the arrey of words to the console
 console.log(words);
 //Print the word count of the sentence to the console
